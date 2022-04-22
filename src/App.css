@@ -1,0 +1,60 @@
+.Modal{
+  position: absolute;
+  top: 10vh;
+  left: 26vw;
+  border-radius: 5px;
+  padding:2vh 2vw;
+  width: 45vw;
+  height: 70vh;
+  background-color: black;
+}
+.container{
+  margin-left:1.5vw;
+  margin-top: 5vh;
+  height:100%;
+}
+.input-container{
+  display:flex;
+  width:100%;
+}
+.input-box{
+  display:flex;
+  flex-direction: column;
+  width:50%;
+  height: 50%;
+}
+.input-box label{
+  margin-bottom: 0.5vh;
+  font-weight: 900;
+}
+.input-box input, textarea{
+  margin-bottom: 3vh;
+  background-color: #2C2C2C;
+  border: none;
+  outline: none;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 4.5vw;
+  background-color: rgb(18, 17, 17);
+  color: #fff;
+  font-size: 0.75vw;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  left:1.7vw;
+  bottom:1vh;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
