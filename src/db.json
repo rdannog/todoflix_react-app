@@ -1,181 +1,79 @@
-[{
-  "id": 1,
-  "title": "Mysterious Island, The",
-  "poster": "http://dummyimage.com/133x100.png/dddddd/000000",
-  "description": "In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-  "isRecently": true,
-  "isFavorite": true,
-  "Stars": 4,
-  "isWatched": false
-}, {
-  "id": 2,
-  "title": "Blume in Love",
-  "poster": "http://dummyimage.com/100x100.png/ff4444/ffffff",
-  "description": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 2,
-  "isWatched": true
-}, {
-  "id": 3,
-  "title": "Month by the Lake, A",
-  "poster": "http://dummyimage.com/190x100.png/cc0000/ffffff",
-  "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 1,
-  "isWatched": false
-}, {
-  "id": 4,
-  "title": "Brave",
-  "poster": "http://dummyimage.com/109x100.png/ff4444/ffffff",
-  "description": "Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 3,
-  "isWatched": true
-}, {
-  "id": 5,
-  "title": "Dakota Skye",
-  "poster": "http://dummyimage.com/201x100.png/cc0000/ffffff",
-  "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 4,
-  "isWatched": true
-}, {
-  "id": 6,
-  "title": "Karlsson on the Roof",
-  "poster": "http://dummyimage.com/125x100.png/ff4444/ffffff",
-  "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 5,
-  "isWatched": false
-}, {
-  "id": 7,
-  "title": "Neverwhere",
-  "poster": "http://dummyimage.com/208x100.png/5fa2dd/ffffff",
-  "description": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-  "isRecently": true,
-  "isFavorite": true,
-  "Stars": 2,
-  "isWatched": false
-}, {
-  "id": 8,
-  "title": "The Army",
-  "poster": "http://dummyimage.com/113x100.png/ff4444/ffffff",
-  "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
-  "isRecently": false,
-  "isFavorite": false,
-  "Stars": 2,
-  "isWatched": true
-}, {
-  "id": 9,
-  "title": "Freejack",
-  "poster": "http://dummyimage.com/121x100.png/ff4444/ffffff",
-  "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim.",
-  "isRecently": true,
-  "isFavorite": true,
-  "Stars": 2,
-  "isWatched": false
-}, {
-  "id": 10,
-  "title": "Dirty Shame, A",
-  "poster": "http://dummyimage.com/206x100.png/cc0000/ffffff",
-  "description": "Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
-  "isRecently": false,
-  "isFavorite": false,
-  "Stars": 2,
-  "isWatched": false
-}, {
-  "id": 11,
-  "title": "Othello",
-  "poster": "http://dummyimage.com/219x100.png/5fa2dd/ffffff",
-  "description": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 1,
-  "isWatched": true
-}, {
-  "id": 12,
-  "title": "Little Odessa",
-  "poster": "http://dummyimage.com/237x100.png/cc0000/ffffff",
-  "description": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 2,
-  "isWatched": false
-}, {
-  "id": 13,
-  "title": "World According to Garp, The",
-  "poster": "http://dummyimage.com/112x100.png/5fa2dd/ffffff",
-  "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-  "isRecently": true,
-  "isFavorite": true,
-  "Stars": 4,
-  "isWatched": false
-}, {
-  "id": 14,
-  "title": "Last Night",
-  "poster": "http://dummyimage.com/128x100.png/ff4444/ffffff",
-  "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 4,
-  "isWatched": false
-}, {
-  "id": 15,
-  "title": "Free Soul, A",
-  "poster": "http://dummyimage.com/192x100.png/cc0000/ffffff",
-  "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-  "isRecently": false,
-  "isFavorite": true,
-  "Stars": 4,
-  "isWatched": true
-}, {
-  "id": 16,
-  "title": "Zazie dans le métro",
-  "poster": "http://dummyimage.com/150x100.png/dddddd/000000",
-  "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
-  "isRecently": false,
-  "isFavorite": false,
-  "Stars": 1,
-  "isWatched": false
-}, {
-  "id": 17,
-  "title": "Last Days in Vietnam",
-  "poster": "http://dummyimage.com/186x100.png/5fa2dd/ffffff",
-  "description": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.",
-  "isRecently": true,
-  "isFavorite": true,
-  "Stars": 4,
-  "isWatched": true
-}, {
-  "id": 18,
-  "title": "Chronicle",
-  "poster": "http://dummyimage.com/159x100.png/dddddd/000000",
-  "description": "Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla.",
-  "isRecently": true,
-  "isFavorite": false,
-  "Stars": 4,
-  "isWatched": true
-}, {
-  "id": 19,
-  "title": "Levitated Mass",
-  "poster": "http://dummyimage.com/192x100.png/dddddd/000000",
-  "description": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
-  "isRecently": false,
-  "isFavorite": false,
-  "Stars": 2,
-  "isWatched": true
-}, {
-  "id": 20,
-  "title": "Signs",
-  "poster": "http://dummyimage.com/195x100.png/5fa2dd/ffffff",
-  "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.",
-  "isRecently": true,
-  "isFavorite": true,
-  "Stars": 4,
-  "isWatched": true
-}]
+[
+  {
+      "id": 2,
+      "title": "The Rocky Horror Picture Show",
+      "descricao": "Os namorados Brad e Janet têm um pneu furado durante uma tempestade e descobrem a misteriosa mansão do louco cientista Dr. Frank-N-Furter.",
+      "poster": "https://sonhandoatravesdepalavras.com.br/wp-content/uploads/2016/10/rocky-horror-poster.jpg",
+      "isVistoRecentemente": false,
+      "isFavorito": true,
+      "isAssistido": true,
+      "stars": 5
+  },
+  {
+      "id": 3,
+      "title": "Metal Lords",
+      "descricao": "Cansados de serem os excluídos, Hunter e Kevin decidem formar uma banda de heavy metal para vencer o festival da escola e conquistar a admiração de todos.",
+      "poster": "https://www.ageratingjuju.com/wp-content/uploads/2022/03/Metal-Lords-Wallpapers-and-Images.jpg",
+      "isVistoRecentemente": true,
+      "isFavorito": true,
+      "isAssistido": true,
+      "stars": 5
+  },
+  {
+      "id": 4,
+      "title": "Medida Provisória",
+      "descricao": "Em um futuro próximo distópico no Brasil, um governo autoritário ordena que todos os cidadãos afrodescendentes se mudem para a África.",
+      "poster": "https://i.ytimg.com/vi/pOjf8oj23k0/mqdefault.jpg",
+      "isVistoRecentemente": false,
+      "isFavorito": false,
+      "isAssistido": false,
+      "stars": null
+  },
+  {
+      "id": 6,
+      "title": "A Vida Invisível",
+      "descricao": "No Rio de Janeiro dos anos 1950, Guida e Eurídice são cruelmente separadas, impedidas de viver os sonhos que alimentaram juntas ainda adolescentes. ",
+      "poster": "http://cineclubecauim.ong.br/wp/wp-content/uploads/2020/03/a-vida-invisivel-800x445.jpg",
+      "isVistoRecentemente": false,
+      "isFavorito": false,
+      "isAssistido": false,
+      "stars": null
+  }, {
+      "id": 7,
+      "title": "AmarElo",
+      "descricao": "Nos bastidores do show no Theatro Municipal de São Paulo, o rapper e ativista Emicida celebra o grande legado da cultura negra brasileira. ",
+      "poster": "https://assets.whatsnewonnetflix.com/external_assets/sggkh+%5B%5Blxx*9*44*43_8_muochl_mvg%5Bwmn%5Bzkr%5Be3%5BC805vQhtDYWV7zJyzMwnXCTFK*B%5BZZZZYH6l8OGw2VxLGPtngZM3dJUhNOOpzQy5RM2%5DnqVMTN1PdE0WILvQki3b7MUcvEVq16z1YQc8mRV7gQrITMW1aXBwVXwIt*1oPLWxCsYnoImZhDNT2SemTflrf02W.jpg",
+      "isVistoRecentemente": true,
+      "isFavorito": true,
+      "isAssistido": true,
+      "stars": 5
+  }, {
+      "id": 8,
+      "title": "Vende-se Esta Casa",
+      "descricao": "Logan e sua mãe estão tentando se recuperar após a morte do pai da família. Para isso, eles se mudam temporariamente para uma casa desocupada de parentes.",
+      "poster": "https://3.bp.blogspot.com/-W37elNuXbbw/Wm3U-RwmPZI/AAAAAAAACXo/GB15Sf18ayk2aJ4sOekKdHPdwqkXIeGnwCLcBGAs/s640/d95e12462a0948d182735e57398490ead3535206.jpg",
+      "isVistoRecentemente": true,
+      "isFavorito": true,
+      "isAssistido": true,
+      "stars": 1
+  }, {
+      "id": 9,
+      "title": "1984",
+      "descricao": "Winston Smith é um funcionário público cuja função é reescrever a história de forma a colocar os líderes de um país fictício sob uma luz positiva. ",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSycywi0zUAmt6H70An0or3rIKHg0EuDWROPw&usqp=CAU",
+      "isVistoRecentemente": true,
+      "isFavorito": true,
+      "isAssistido": true,
+      "stars": 3
+  },
+  {
+      "id": 1,
+      "title": "Que Horas Ela Volta?",
+      "descricao": "Val é a fiel empregada domestica de uma família rica. Mas a chegada de sua filha gera tensão na casa e faz com que ela comece a questionar esse papel.",
+      "poster": "https://i.pinimg.com/originals/0c/94/d6/0c94d6c1f1fa0528dc3b7e22df6562c0.jpg",
+      "isVistoRecentemente": true,
+      "isFavorito": true,
+      "isAssistido": true,
+      "stars": 4
+  }
+]
