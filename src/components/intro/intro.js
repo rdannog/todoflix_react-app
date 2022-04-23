@@ -18,6 +18,13 @@ const Container = styled.div`
     align-items: center;
     justify-content: flex-start;
     height: 55vh;
+    animation: 2s slide-right 1s forwards;
+        transform:translateX(-120%);
+        @keyframes slide-right {
+            to {
+              transform:translateX(0);
+            }
+        }
 `
 const PosterWrapper = styled.div`
     margin-left: 6vw;

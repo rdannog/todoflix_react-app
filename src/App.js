@@ -16,7 +16,6 @@ export default class App extends React.Component {
           <Route path="/todos" element={<Todos />} />
           <Route path="/favoritos" element={<Home />} />
           <Route path="/vistos" element={<Home />} />
-          <Route path="/adicionados" element={<Home />} />
         </Routes>
       </Router>
     )

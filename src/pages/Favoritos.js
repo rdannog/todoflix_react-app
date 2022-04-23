@@ -69,7 +69,7 @@ const Description = styled.p`
   font-size:0.9vw;
   text-align:justify;
 `
-export default class Todos extends React.Component {
+export default class favoritos extends React.Component {
   state = {
     boxState: false
   }

@@ -22,7 +22,7 @@ const DropDownListContainer = styled.div`
 
 const DropDownList = styled.ul`
   width:100%;
-  padding: 1vw;
+  padding: 1vh 1vw;
   font-size: 0.5vh 1vw;
   color: #3faffa;
   background-color:black;
@@ -81,9 +81,6 @@ export default class Menu extends React.Component {
                     </ListItem>
                     <ListItem onClick={this.onOptionClicked("Já Vistos")} >
                       <Link to="/vistos">Já Vistos</Link>
-                    </ListItem>
-                    <ListItem onClick={this.onOptionClicked("Adicionados")} >
-                      <Link to="/adicionados">Adicionados</Link>
                     </ListItem>
                 </DropDownList>
               </DropDownListContainer>
