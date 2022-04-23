@@ -2,7 +2,6 @@ import React from "react";
 import Intro from "../components/intro/intro";
 import Slide from "../components/slide/slide";
 import {createGlobalStyle} from "styled-components";
-import Header from "../components/header/header";
 
 const GlobalStyle = createGlobalStyle`
   *{

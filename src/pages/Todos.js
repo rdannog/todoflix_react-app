@@ -1,7 +1,6 @@
 import React from "react";
 import Data from "../db.json"
 import { createGlobalStyle } from "styled-components";
-import Modal from "react-modal";
 import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -16,6 +15,23 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: black;
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #000; 
+      border-radius:10px;
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: #333; 
+      border-radius:10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
   }
 
   a, button{
@@ -38,7 +54,6 @@ const AllTitle = styled.h1`
 const Card = styled.div`
   width:18vw;
   margin-bottom:5vh;
-  cursor:pointer;
 `
 const Poster = styled.img`
   width:100%;
@@ -70,15 +85,7 @@ const Description = styled.p`
   text-align:justify;
 `
 export default class Todos extends React.Component {
-  state = {
-    boxState: false
-  }
-
-  handleModal = () => {
-    this.setState({
-      boxState: !this.state.boxState
-    })
-  }
+  
   render() {
     return (
       <>
@@ -86,7 +93,7 @@ export default class Todos extends React.Component {
         <AllTitle> Todos os filmes</AllTitle>
         <Container>
           {Data.map(item => (
-            <Card onClick={this.handleModal} >
+            <Card >
               <Poster src={item.poster} alt="" />
               <Wrapper>
                 <Title>{item.title}</Title>
@@ -108,19 +115,6 @@ export default class Todos extends React.Component {
                 </Stars>
               </Wrapper>
               <Description>{item.descricao}</Description>
-              <Modal
-                role={"dialog"}
-                shouldFocusAfterRender={true}
-                className="Modal"
-                onRequestClose={this.handleModal}
-                isOpen={this.state.boxState}
-              >
-                <div>
-                  <button onClick={this.handleModal}>X</button>
-                </div>
-                <h3>Adicionar Filme</h3>
-
-              </Modal>
             </Card>
           ))}
         </Container>
