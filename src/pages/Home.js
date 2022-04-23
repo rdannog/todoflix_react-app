@@ -16,6 +16,23 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: black;
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #000; 
+      border-radius:10px;
+    }
+     
+    ::-webkit-scrollbar-thumb {
+      background: #333; 
+      border-radius:10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
   }
 
   a, button{

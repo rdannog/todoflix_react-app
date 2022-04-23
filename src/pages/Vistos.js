@@ -86,7 +86,7 @@ const Description = styled.p`
   font-size:0.9vw;
   text-align:justify;
 `
-export default class Favoritos extends React.Component {
+export default class Vistos extends React.Component {
   state = {
     boxState: false
   }
@@ -100,11 +100,11 @@ export default class Favoritos extends React.Component {
     return (
       <>
         <GlobalStyle />
-        <AllTitle>Favoritados</AllTitle>
+        <AllTitle>Já Vistos</AllTitle>
         <Container>
           {Data.map(item => (
-            <Card onClick={this.handleModal} style={item.isFavorito === false ? {display:"none"}: item.isFavorito}>
-              {item.isFavorito && (
+            <Card onClick={this.handleModal} style={item.isAssistido === false ? {display:"none"}: item.isAssistido}>
+              {item.isAssistido && (
                 <>
                 <Poster src={item.poster} alt="" />
                 <Wrapper>

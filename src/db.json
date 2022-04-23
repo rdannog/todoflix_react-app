@@ -15,9 +15,9 @@
     "descricao": "Cansados de serem os excluídos, Hunter e Kevin decidem formar uma banda de heavy metal para vencer o festival da escola e conquistar a admiração de todos.",
     "poster": "https://www.ageratingjuju.com/wp-content/uploads/2022/03/Metal-Lords-Wallpapers-and-Images.jpg",
     "isVistoRecentemente": true,
-    "isFavorito": true,
+    "isFavorito": false,
     "isAssistido": true,
-    "stars": 5
+    "stars": 4
   },
   {
     "id": 3,
@@ -44,18 +44,18 @@
     "title": "AmarElo",
     "descricao": "Nos bastidores do show no Theatro Municipal de São Paulo, o rapper e ativista Emicida celebra o grande legado da cultura negra brasileira. ",
     "poster": "https://assets.whatsnewonnetflix.com/external_assets/sggkh+%5B%5Blxx*9*44*43_8_muochl_mvg%5Bwmn%5Bzkr%5Be3%5BC805vQhtDYWV7zJyzMwnXCTFK*B%5BZZZZYH6l8OGw2VxLGPtngZM3dJUhNOOpzQy5RM2%5DnqVMTN1PdE0WILvQki3b7MUcvEVq16z1YQc8mRV7gQrITMW1aXBwVXwIt*1oPLWxCsYnoImZhDNT2SemTflrf02W.jpg",
-    "isVistoRecentemente": true,
-    "isFavorito": true,
+    "isVistoRecentemente": false,
+    "isFavorito": false,
     "isAssistido": true,
-    "stars": 5
+    "stars": 3
   },
   {
     "id": 6,
     "title": "Vende-se Esta Casa",
     "descricao": "Logan e sua mãe estão tentando se recuperar após a morte do pai da família. Para isso, eles se mudam temporariamente para uma casa desocupada de parentes.",
     "poster": "https://3.bp.blogspot.com/-W37elNuXbbw/Wm3U-RwmPZI/AAAAAAAACXo/GB15Sf18ayk2aJ4sOekKdHPdwqkXIeGnwCLcBGAs/s640/d95e12462a0948d182735e57398490ead3535206.jpg",
-    "isVistoRecentemente": true,
-    "isFavorito": true,
+    "isVistoRecentemente": false,
+    "isFavorito": false,
     "isAssistido": true,
     "stars": 1
   },
@@ -74,7 +74,7 @@
     "title": "Que Horas Ela Volta?",
     "descricao": "Val é a fiel empregada domestica de uma família rica. Mas a chegada de sua filha gera tensão na casa e faz com que ela comece a questionar esse papel.",
     "poster": "https://blog.newtonpaiva.br/wp-content/uploads/2021/05/que_horas_ela_volta_2_widexl.jpg",
-    "isVistoRecentemente": true,
+    "isVistoRecentemente": false,
     "isFavorito": true,
     "isAssistido": true,
     "stars": 5
