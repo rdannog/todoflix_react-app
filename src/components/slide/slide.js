@@ -1,47 +1,9 @@
 import React, { Component } from "react";
 import "../../App.css"
+import * as S from "./styles"
 import Data from "../../db.json"
-import styled from "styled-components";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-const Slides = styled(Slider)`
-    
-    
-`
-const Stars = styled.div`
-    display:flex;
-    align-items:center;
-    justify-content: start;
-    p{
-        font-size:1vw;
-        margin-right:0.5vw;
-    }
-`
-const Card = styled.div`
 
-`
-const Title = styled.h2`
-    font-size:1.4vw;
-`
-const Wrapper = styled.div`
-margin-top:1.5vh;
-margin-bottom:1.5vh;
-width:90%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-`
-const Poster = styled.img`
-    width:90%;
-    border-radius:8px;
-`
-const Description = styled.p`
-    width:90%;
-    border-radius:8px;
-    font-size:0.9vw;
-`
 export default class Slide extends Component {
     render() {
         const settings = {
@@ -57,13 +19,13 @@ export default class Slide extends Component {
         return (
             <div style={{ marginLeft: "6vw", marginRight: "3vw" }}>
                 <h2 style={{ marginBottom: "4vh" }}> Destaques</h2>
-                <Slides {...settings}>
+                <S.Slides {...settings}>
                     {Data.map(item => (
-                        <Card>
-                            <Poster src={item.poster} alt="" />
-                            <Wrapper>
-                                <Title>{item.title}</Title>
-                                <Stars>
+                        <S.Card>
+                            <S.Poster src={item.poster} alt="" />
+                            <S.Wrapper>
+                                <S.Title>{item.title}</S.Title>
+                                <S.Stars>
                                     <p>{item.stars === null ? "-" : item.stars+"/5"}</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                                         <rect id="Box" width="17" height="17" />
@@ -78,13 +40,13 @@ export default class Slide extends Component {
                                     }
                                         />
                                     </svg>
-                                </Stars>
-                            </Wrapper>
-                            <Description>{item.descricao}</Description>
-                        </Card>
+                                </S.Stars>
+                            </S.Wrapper>
+                            <S.Description>{item.descricao}</S.Description>
+                        </S.Card>
                     ))}
 
-                </Slides>
+                </S.Slides>
             </div>
         );
     }

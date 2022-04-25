@@ -1,6 +1,7 @@
 import React from "react";
 import Data from "../db.json"
 import { createGlobalStyle } from "styled-components";
+import SearchIcon from "../components/header/img/searchicon.png"
 import Modal from "react-modal";
 import styled from "styled-components";
 
@@ -16,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: black;
+    
     ::-webkit-scrollbar {
       width: 15px;
     }
@@ -86,11 +88,57 @@ const Description = styled.p`
   font-size:0.9vw;
   text-align:justify;
 `
+const Input = styled.input`
+  position:absolute;
+  left:58vw;
+  top:4vh;
+  width:30vw;
+  padding:1.5vh 3.2vw;
+  border:transparent;
+  border-radius:5px;
+  outline:none;
+  font-size:0.9vw;
+  opacity:1;
+  background-color:#2C2C2C;
+  background-image: url(${SearchIcon});
+  background-size: 2.2vh;
+  background-repeat: no-repeat;
+  background-position: 1.2vw center;
+  
+  &::placeholder {
+      color: white;
+    }
+`
 export default class Favoritos extends React.Component {
-  state = {
+  state={
+    filmes: Data,
+    listafilter: [],
     boxState: false
   }
 
+  componentWillMount() {
+    this.setState({
+      listafilter: this.state.filmes
+    })
+  }
+
+  filtro = (e) => {
+    const {filmes} = this.state;
+    if(e.target.value === '') {
+      this.setState({
+        listafilter:filmes
+      })
+      return
+    }
+    const filmeconvert = filmes.filter((item) => {
+      if(item.title.toLowerCase().includes(e.target.value.toLowerCase())){
+        return true
+      }
+    })
+    this.setState({
+      listafilter:filmeconvert
+    })
+  }
   handleModal = () => {
     this.setState({
       boxState: !this.state.boxState
@@ -99,10 +147,11 @@ export default class Favoritos extends React.Component {
   render() {
     return (
       <>
+        <Input onChange={this.filtro} type="text" placeholder="Pesquisar" />
         <GlobalStyle />
         <AllTitle>Favoritados</AllTitle>
         <Container>
-          {Data.map(item => (
+          {this.state.listafilter.map(item => (
             <Card onClick={this.handleModal} style={item.isFavorito === false ? {display:"none"}: item.isFavorito}>
               {item.isFavorito && (
                 <>

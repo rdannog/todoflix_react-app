@@ -27,11 +27,11 @@ export const Title = styled.h1`
   cursor:pointer;
 `
 export const SearchWrapper = styled.div`
-  height:100%;
-  width:52%;
   display:flex;
   align-items:center;
   justify-content: space-between;
+  height:100%;
+  width:52%;
   font-size: 1vw;
 `
 export const AddButton = styled.button`
@@ -43,11 +43,12 @@ export const AddButton = styled.button`
   border:none;
 `
 export const Input = styled.input`
-  width:55%;
+  visibility: hidden;
   padding:1.5vh 3.2vw;
   border:transparent;
   border-radius:5px;
   outline:none;
+  width:55%;
   font-size:0.9vw;
   opacity:1;
   background-color:#2C2C2C;
