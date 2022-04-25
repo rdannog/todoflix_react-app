@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Icon from "./Group 32.svg"
+import Icon from "./img/Group 32.svg"
 
 
 

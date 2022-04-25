@@ -1,65 +1,8 @@
 import React from "react";
 import "../../App.css"
-import styled from "styled-components";
-import Favorite from "./heartIcon.svg"
-import { createGlobalStyle } from "styled-components";
+import * as S from "./styles"
+import Favorite from "./img/heartIcon.svg"
 
-const GlobalStyle = createGlobalStyle`
-  *{
-    margin:0;
-    padding:0;
-    color: white;
-    box-sizing: border-box;
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
-  }`
-const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 55vh;
-    animation: 2s slide-right 1s forwards;
-        transform:translateX(-120%);
-        @keyframes slide-right {
-            to {
-              transform:translateX(0);
-            }
-        }
-`
-const PosterWrapper = styled.div`
-    margin-left: 6vw;
-    img{
-        width:28vw;
-    }
-`
-const TextBox = styled.div`
-    display:flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content:space-around;
-    margin-left:4.5vw;
-    height: 55%;
-    h3{
-        font-size:1vw;
-    }
-    h2{
-        font-size: 2vw;
-    }
-    p{
-        width:40%;
-        font-size: 0.85vw;
-    }
-`
-const Stars = styled.div`
-    display:flex;
-    align-items:center;
-    justify-content: start;
-    width:9%;
-`
-const HeartIcon = styled.img`
-    width: 1.3vw;
-    cursor:pointer;
-`
 export default class Intro extends React.Component {
     state = {
         filmes: [
@@ -82,16 +25,16 @@ export default class Intro extends React.Component {
     }
     render() {
         return (
-            <Container>
-                <GlobalStyle />
-                <PosterWrapper>
+            <S.Container>
+                <S.GlobalStyle />
+                <S.PosterWrapper>
                     <img src={this.state.filmes[0].poster} alt="" />
-                </PosterWrapper>
-                <TextBox>
+                </S.PosterWrapper>
+                <S.TextBox>
                     {this.state.filmes.map(item => (
                         <>
                             <div className="tooltip">
-                                <HeartIcon 
+                                <S.HeartIcon 
                                 onClick={this.favoritar} 
                                 style = {this.state.isFavorito === false?{filter:"brightness(0.5)"}:{filter: "drop-shadow(1px 1px 10px rgba(255,255,255,0.5))"}} 
                                 src={Favorite} 
@@ -101,7 +44,7 @@ export default class Intro extends React.Component {
                             <h3>{item.isVistoRecentemente === true ? "Visto Recentemente" : "Na sua lista"}</h3>
                             <h2>{item.title}</h2>
                             <p>{item.descricao}</p>
-                            <Stars>
+                            <S.Stars>
                                 <p>{item.stars}/5</p>
                                 <svg  xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                                     <rect id="Box" width="17" height="17" />
@@ -109,13 +52,11 @@ export default class Intro extends React.Component {
                                     style={item.stars < 3 ? { fill: "red" } : item.stars === 3 ? { fill: "yellow"}: item.stars>3 ? {fill:"green"}:{fill:"white"}}
                                      />
                                 </svg>
-
-
-                            </Stars>
+                            </S.Stars>
                         </>
                     ))}
-                </TextBox>
-            </Container>
+                </S.TextBox>
+            </S.Container>
         )
     }
 }
