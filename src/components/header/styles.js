@@ -61,11 +61,12 @@ export const Input = styled.input`
     }
 `
 export const CloseButton = styled.button`
-  font-size:1.2vw;.
+  font-size:2vw;
   font-weight:900;
   background-color:transparent;
   outline:none;
   border:none;
+  transform: rotate(45deg)
 `
 export const CloseButtonBox = styled.div`
   display:flex;
@@ -73,7 +74,7 @@ export const CloseButtonBox = styled.div`
   align-items:start;
 `
 export const ModalTitle = styled.h1`
-  margin-top:2vh;
+ 
   margin-left:1.5vw;
   font-weight:400;
 `

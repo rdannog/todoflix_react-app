@@ -1,7 +1,8 @@
 import React from "react";
-import Data from "../db.json"
+import Data from "../services/all.json"
 import { createGlobalStyle } from "styled-components";
 import SearchIcon from "../components/header/img/searchicon.png"
+import Favorite from "../components/intro/img/heartIcon.svg"
 import Modal from "react-modal";
 import styled from "styled-components";
 
@@ -109,8 +110,19 @@ const Input = styled.input`
       color: white;
     }
 `
+
+const ImageContainer = styled.div`
+  position:relative;
+`
+const HeartIcon = styled.img`
+  position: absolute;
+  top:4%;
+  left:90%;
+  width: 1.4vw;
+  cursor:pointer;
+`
 export default class Favoritos extends React.Component {
-  state={
+  state = {
     filmes: Data,
     listafilter: [],
     boxState: false
@@ -123,22 +135,23 @@ export default class Favoritos extends React.Component {
   }
 
   filtro = (e) => {
-    const {filmes} = this.state;
-    if(e.target.value === '') {
+    const { filmes } = this.state;
+    if (e.target.value === '') {
       this.setState({
-        listafilter:filmes
+        listafilter: filmes
       })
       return
     }
     const filmeconvert = filmes.filter((item) => {
-      if(item.title.toLowerCase().includes(e.target.value.toLowerCase())){
+      if (item.title.toLowerCase().includes(e.target.value.toLowerCase())) {
         return true
       }
     })
     this.setState({
-      listafilter:filmeconvert
+      listafilter: filmeconvert
     })
   }
+
   handleModal = () => {
     this.setState({
       boxState: !this.state.boxState
@@ -152,43 +165,49 @@ export default class Favoritos extends React.Component {
         <AllTitle>Favoritados</AllTitle>
         <Container>
           {this.state.listafilter.map(item => (
-            <Card onClick={this.handleModal} style={item.isFavorito === false ? {display:"none"}: item.isFavorito}>
+            <Card style={item.isFavorito === false ? { display: "none" } : item.isFavorito}>
               {item.isFavorito && (
                 <>
-                <Poster src={item.poster} alt="" />
-                <Wrapper>
-                  <Title>{item.title}</Title>
-                  <Stars>
-                    <p>{item.stars === null ? "-" : item.stars}/5</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                      <rect id="Box" width="17" height="17" />
-                      <path id="Path_1994" data-name="Path 1994" d="M97-8.286h2.805v-8.229H97Zm15.429-7.543a1.391,1.391,0,0,0-1.4-1.371H106.6l.666-3.134.021-.219a1.021,1.021,0,0,0-.309-.727l-.743-.72-4.615,4.519a1.326,1.326,0,0,0-.414.967v6.857a1.391,1.391,0,0,0,1.4,1.371h6.312a1.394,1.394,0,0,0,1.29-.837l2.118-4.834a1.328,1.328,0,0,0,.1-.5v-1.31l-.007-.007Z" transform="translate(-96.143 23.714)" style=
-                        {item.stars === null ?
-                          { fill: "white" } :
-                          item.stars < 3 ?
-                            { fill: "red" } :
-                            item.stars === 3 ?
-                              { fill: "yellow" } :
-                              { fill: "green" }
-                        }
-                      />
-                    </svg>
-                  </Stars>
-                </Wrapper>
-                <Description>{item.descricao}</Description>
-                <Modal
-                  role={"dialog"}
-                  shouldFocusAfterRender={true}
-                  className="Modal"
-                  onRequestClose={this.handleModal}
-                  isOpen={this.state.boxState}
-                >
-                  <div>
-                    <button onClick={this.handleModal}>X</button>
-                  </div>
-                  <h3>Adicionar Filme</h3>
-  
-                </Modal>
+                  <ImageContainer>
+                    <HeartIcon
+                      style={item.isFavorito === false ? { filter: "brightness(0.3)" } : { filter: "drop-shadow(1px 1px 10px rgba(255,255,255,0.8))" }}
+                      src={Favorite}
+                      alt="" />
+                    <Poster src={item.poster} alt="" />
+                  </ImageContainer>
+                  <Wrapper onClick={this.handleModal}>
+                    <Title>{item.title}</Title>
+                    <Stars>
+                      <p>{item.stars === null ? "-" : item.stars}/5</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                        <rect id="Box" width="17" height="17" />
+                        <path id="Path_1994" data-name="Path 1994" d="M97-8.286h2.805v-8.229H97Zm15.429-7.543a1.391,1.391,0,0,0-1.4-1.371H106.6l.666-3.134.021-.219a1.021,1.021,0,0,0-.309-.727l-.743-.72-4.615,4.519a1.326,1.326,0,0,0-.414.967v6.857a1.391,1.391,0,0,0,1.4,1.371h6.312a1.394,1.394,0,0,0,1.29-.837l2.118-4.834a1.328,1.328,0,0,0,.1-.5v-1.31l-.007-.007Z" transform="translate(-96.143 23.714)" style=
+                          {item.stars === null ?
+                            { fill: "white" } :
+                            item.stars < 3 ?
+                              { fill: "red" } :
+                              item.stars === 3 ?
+                                { fill: "yellow" } :
+                                { fill: "green" }
+                          }
+                        />
+                      </svg>
+                    </Stars>
+                  </Wrapper>
+                  <Description>{item.descricao}</Description>
+                  <Modal
+                    role={"dialog"}
+                    shouldFocusAfterRender={true}
+                    className="Modal"
+                    onRequestClose={this.handleModal}
+                    isOpen={this.state.boxState}
+                  >
+                    <div>
+                      <button onClick={this.handleModal}>X</button>
+                    </div>
+                    <h3>Adicionar Filme</h3>
+
+                  </Modal>
                 </>
               )}
             </Card>

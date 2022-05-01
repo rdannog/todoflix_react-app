@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 export const Slides = styled(Slider)``
 
-export const Card = styled.div``
+export const Card = styled.div`
+`
 
 export const Title = styled.h2`
     font-size:1.4vw;
@@ -39,7 +40,14 @@ export const Stars = styled.div`
     }
 
     `
-    // .path{
-    //     fill: ${ props => (props.thumb === null ? "white" : props.thumb < 3 ? "red" : props.thumb === 3 ? "yellow" : "green")}
-    // }
+export const ImageContainer = styled.div`
+    position:relative;
+  `
+export const HeartIcon = styled.img`
+    position: absolute;
+    top:4%;
+    left:82%;
+    width: 1.4vw;
+    cursor:pointer;
+  `
 

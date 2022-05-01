@@ -1,9 +1,11 @@
 import React from "react";
-import Data from "../db.json"
+import Data from "../services/all.json"
 import { createGlobalStyle } from "styled-components";
 import Modal from "react-modal";
 import styled from "styled-components";
 import SearchIcon from "../components/header/img/searchicon.png"
+import Favorite from "../components/intro/img/heartIcon.svg"
+
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -108,6 +110,16 @@ const Input = styled.input`
       color: white;
     }
 `
+const ImageContainer = styled.div`
+  position:relative;
+`
+const HeartIcon = styled.img`
+  position: absolute;
+  top:4%;
+  left:90%;
+  width: 1.4vw;
+  cursor:pointer;
+`
 export default class Vistos extends React.Component {
   state={
     filmes: Data,
@@ -143,6 +155,11 @@ export default class Vistos extends React.Component {
       boxState: !this.state.boxState
     })
   }
+  favoritar = () => {
+    this.setState({
+        isFavorito: !this.state.isFavorito
+    })
+}
   render() {
     return (
       <>
@@ -151,12 +168,19 @@ export default class Vistos extends React.Component {
         <AllTitle>Já Vistos</AllTitle>
         <Container>
           {this.state.listafilter.map(item => (
-            <Card onClick={this.handleModal} style={item.isAssistido === false ? {display:"none"}: item.isAssistido}>
+            <Card style={item.isAssistido === false ? {display:"none"}: item.isAssistido}>
               {item.isAssistido && (
                 <>
-                <Poster src={item.poster} alt="" />
+                <ImageContainer>
+                    <HeartIcon
+                      onClick={this.favoritar}
+                      style={item.isFavorito === false ? { filter: "brightness(0.3)" } : { filter: "drop-shadow(1px 1px 10px rgba(255,255,255,0.8))" }}
+                      src={Favorite}
+                      alt="" />
+                    <Poster src={item.poster} alt="" />
+                  </ImageContainer>
                 <Wrapper>
-                  <Title>{item.title}</Title>
+                  <Title onClick={this.handleModal}>{item.title}</Title>
                   <Stars>
                     <p>{item.stars === null ? "-" : item.stars}/5</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">

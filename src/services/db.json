@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "The Rocky Horror Picture Show",
+    "descricao": "Os namorados Brad e Janet têm um pneu furado durante uma tempestade e descobrem a misteriosa mansão do louco cientista Dr. Frank-N-Furter.",
+    "poster": "https://ychef.files.bbci.co.uk/976x549/p08hc6hj.jpg",
+    "isVistoRecentemente": false,
+    "isFavorito": true,
+    "isAssistido": true,
+    "stars": 5
+  },
+  {
+    "id": 2,
+    "title": "Metal Lords",
+    "descricao": "Cansados de serem os excluídos, Hunter e Kevin decidem formar uma banda de heavy metal para vencer o festival da escola e conquistar a admiração de todos.",
+    "poster": "https://www.ageratingjuju.com/wp-content/uploads/2022/03/Metal-Lords-Wallpapers-and-Images.jpg",
+    "isVistoRecentemente": true,
+    "isFavorito": true,
+    "isAssistido": true,
+    "stars": 4
+  },
+  {
+    "id": 3,
+    "title": "Medida Provisória",
+    "descricao": "Em um futuro próximo distópico no Brasil, um governo autoritário ordena que todos os cidadãos afrodescendentes se mudem para a África.",
+    "poster": "https://i.ytimg.com/vi/pOjf8oj23k0/mqdefault.jpg",
+    "isVistoRecentemente": false,
+    "isFavorito": false,
+    "isAssistido": false,
+    "stars": null
+  },
+  {
+    "id": 4,
+    "title": "A Vida Invisível",
+    "descricao": "No Rio de Janeiro dos anos 1950, Guida e Eurídice são cruelmente separadas, impedidas de viver os sonhos que alimentaram juntas ainda adolescentes. ",
+    "poster": "http://cineclubecauim.ong.br/wp/wp-content/uploads/2020/03/a-vida-invisivel-800x445.jpg",
+    "isVistoRecentemente": false,
+    "isFavorito": false,
+    "isAssistido": false,
+    "stars": null
+  },
+  {
+    "id": 5,
+    "title": "AmarElo",
+    "descricao": "Nos bastidores do show no Theatro Municipal de São Paulo, o rapper e ativista Emicida celebra o grande legado da cultura negra brasileira. ",
+    "poster": "https://assets.whatsnewonnetflix.com/external_assets/sggkh+%5B%5Blxx*9*44*43_8_muochl_mvg%5Bwmn%5Bzkr%5Be3%5BC805vQhtDYWV7zJyzMwnXCTFK*B%5BZZZZYH6l8OGw2VxLGPtngZM3dJUhNOOpzQy5RM2%5DnqVMTN1PdE0WILvQki3b7MUcvEVq16z1YQc8mRV7gQrITMW1aXBwVXwIt*1oPLWxCsYnoImZhDNT2SemTflrf02W.jpg",
+    "isVistoRecentemente": false,
+    "isFavorito": false,
+    "isAssistido": true,
+    "stars": 3
+  },
+  {
+    "id": 6,
+    "title": "Vende-se Esta Casa",
+    "descricao": "Logan e sua mãe estão tentando se recuperar após a morte do pai da família. Para isso, eles se mudam temporariamente para uma casa desocupada de parentes.",
+    "poster": "https://3.bp.blogspot.com/-W37elNuXbbw/Wm3U-RwmPZI/AAAAAAAACXo/GB15Sf18ayk2aJ4sOekKdHPdwqkXIeGnwCLcBGAs/s640/d95e12462a0948d182735e57398490ead3535206.jpg",
+    "isVistoRecentemente": false,
+    "isFavorito": false,
+    "isAssistido": true,
+    "stars": 1
+  },
+  {
+    "id": 7,
+    "title": "1984",
+    "descricao": "Winston Smith é um funcionário público cuja função é reescrever a história de forma a colocar os líderes de um país fictício sob uma luz positiva. ",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSycywi0zUAmt6H70An0or3rIKHg0EuDWROPw&usqp=CAU",
+    "isVistoRecentemente": true,
+    "isFavorito": true,
+    "isAssistido": true,
+    "stars": 4
+  },
+  {
+    "id": 8,
+    "title": "Que Horas Ela Volta?",
+    "descricao": "Val é a fiel empregada domestica de uma família rica. Mas a chegada de sua filha gera tensão na casa e faz com que ela comece a questionar esse papel.",
+    "poster": "https://blog.newtonpaiva.br/wp-content/uploads/2021/05/que_horas_ela_volta_2_widexl.jpg",
+    "isVistoRecentemente": false,
+    "isFavorito": true,
+    "isAssistido": true,
+    "stars": 5
+  },
+  {
+    "id": 9,
+    "title": "Russian Doll",
+    "descricao": "Nadia morre tragicamente na noite de seu aniversário de 36 anos. Mas, inexplicavelmente, ela se vê de volta à vida e à festa que seus amigos organizaram para ela.",
+    "poster": "https://www.cinemartmagazine.it/wp-content/uploads/2019/08/Russian-Doll.jpg",
+    "isVistoRecentemente": true,
+    "isFavorito": true,
+    "isAssistido": true,
+    "stars": 5
+  }
+]

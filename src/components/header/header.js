@@ -45,7 +45,7 @@ export default class Header extends React.Component {
             isOpen={this.state.boxState}
           >
             <S.CloseButtonBox>
-              <S.CloseButton onClick={this.handleModal}>X</S.CloseButton>
+              <S.CloseButton onClick={this.handleModal}>+</S.CloseButton>
             </S.CloseButtonBox>
             <S.ModalTitle>Adicionar Filme</S.ModalTitle>
             <div className="container">
@@ -62,22 +62,24 @@ export default class Header extends React.Component {
                   <textarea name="comentarios" id="comentarios" style={{ height: "8vh" }}></textarea>
 
                 </div>
-                <div>
+                <div className="image-box">
+                  <img src={Placeholder} alt="" style={{ filter: "brightness(0.6)" }} />
                   <label>
                     Imagem de capa
                   </label>
-                  <img src={Placeholder} alt="" style={{ filter: "brightness(0.6)" }} />
-                  <input type="file" name="arquivo" id="arquivo" />
+                  <input type="text" placeholder="Cole aqui a url da imagem"/>
 
                 </div>
               </div>
 
-              <div>
+              <div className="status">
                 <h3>Status</h3>
+                <label>
                 <input type="radio" name="status" value="Já assisti" />
-                <label> Já assisti </label>
+                 Já assisti </label>
+                <label>
                 <input type="radio" name="status" value="Ainda não assisti" />
-                <label> Ainda não assisti </label>
+                 Ainda não assisti </label>
               </div>
               <div>
                 <h3>
@@ -85,8 +87,8 @@ export default class Header extends React.Component {
                   <ReactStars {...info} />
                 </h3>
               </div>
-              <div>
-                <S.AddButton style={{ backgroundColor: "transparent" }}>Cancelar</S.AddButton>
+              <div className="button">
+                <S.AddButton onClick={this.handleModal} style={{ backgroundColor: "transparent" }}>Cancelar</S.AddButton>
                 <S.AddButton>Confirmar</S.AddButton>
               </div>
             </div>

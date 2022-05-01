@@ -1,8 +1,10 @@
 import React from "react";
-import Data from "../db.json"
+import Data from "../services/all.json"
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import SearchIcon from "../components/header/img/searchicon.png"
+import Favorite from "../components/intro/img/heartIcon.svg"
+
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -106,9 +108,19 @@ const Input = styled.input`
       color: white;
     }
 `
+const ImageContainer = styled.div`
+  position:relative;
+`
+const HeartIcon = styled.img`
+  position: absolute;
+  top:4%;
+  left:90%;
+  width: 1.4vw;
+  cursor:pointer;
+`
 export default class Todos extends React.Component {
 
-  state={
+  state = {
     filmes: Data,
     listafilter: []
   }
@@ -120,22 +132,23 @@ export default class Todos extends React.Component {
   }
 
   filtro = (e) => {
-    const {filmes} = this.state;
-    if(e.target.value === '') {
+    const { filmes } = this.state;
+    if (e.target.value === '') {
       this.setState({
-        listafilter:filmes
+        listafilter: filmes
       })
       return
     }
     const filmeconvert = filmes.filter((item) => {
-      if(item.title.toLowerCase().includes(e.target.value.toLowerCase())){
+      if (item.title.toLowerCase().includes(e.target.value.toLowerCase())) {
         return true
       }
     })
     this.setState({
-      listafilter:filmeconvert
+      listafilter: filmeconvert
     })
   }
+  
   render() {
     return (
       <>
@@ -145,7 +158,13 @@ export default class Todos extends React.Component {
         <Container>
           {this.state.listafilter.map(item => (
             <Card >
+              <ImageContainer>
+              <HeartIcon
+                style={item.isFavorito === false ? { filter: "brightness(0.3)" } : { filter: "drop-shadow(1px 1px 10px rgba(255,255,255,0.8))" }}
+                src={Favorite}
+                alt="" />
               <Poster src={item.poster} alt="" />
+              </ImageContainer>
               <Wrapper>
                 <Title>{item.title}</Title>
                 <Stars>
