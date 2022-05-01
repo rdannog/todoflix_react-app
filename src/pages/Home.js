@@ -1,5 +1,5 @@
 import React from "react";
-import Data from "../services/all.json"
+import {api} from "../services/api"
 import Intro from "../components/intro/intro";
 import Slide from "../components/slide/slide";
 import styled, { createGlobalStyle } from "styled-components";
@@ -113,10 +113,24 @@ const Description = styled.p`
 
 export default class Home extends React.Component {
   state = {
-    allMovies: Data,
+    allMovies: [],
     filteredMovies: []
   }
-
+  async componentDidMount() {  
+    this.getAllMovies()
+  }
+  getAllMovies = async () => {
+    const response = await api.get('/allMovies')
+    console.log(response.data)
+    
+    const allMoviesList = response.data.map((item) => {
+      return {...item,}}
+    )
+  
+    this.setState({
+      allMovies:allMoviesList
+    })
+  }
 
   handleSearch = (e) => {
     const { allMovies } = this.state;

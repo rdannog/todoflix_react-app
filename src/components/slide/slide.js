@@ -1,11 +1,29 @@
 import React, { Component } from "react";
 import "../../App.css"
 import * as S from "./styles"
-import Data from "../../services/db.json"
+import {api} from "../../services/api"
+
 import Favorite from "../intro/img/heartIcon.svg"
 
 
 export default class Slide extends Component {
+    state = {
+        allMovies: []
+      }
+      async componentDidMount() {  
+        this.getAllMovies()
+      }
+      getAllMovies = async () => {
+        const response = await api.get('/destaques')
+        const allMoviesList = response.data.map((item) => {
+          return {...item,}}
+        )
+      
+        this.setState({
+          allMovies:allMoviesList
+        })
+      }
+    
     render() {
         const settings = {
             dots: true,
@@ -21,7 +39,7 @@ export default class Slide extends Component {
             <div style={{ marginLeft: "6vw", marginRight: "3vw" }}>
                 <h2 style={{ marginBottom: "4vh" }}> Destaques</h2>
                 <S.Slides {...settings}>
-                    {Data.map(item => (
+                    {this.state.allMovies.map(item => (
                         <S.Card>
                             <S.ImageContainer>
                                 <S.HeartIcon

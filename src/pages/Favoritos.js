@@ -1,5 +1,5 @@
 import React from "react";
-import Data from "../services/all.json"
+import {api} from "../services/api"
 import { createGlobalStyle } from "styled-components";
 import SearchIcon from "../components/header/img/searchicon.png"
 import Favorite from "../components/intro/img/heartIcon.svg"
@@ -57,7 +57,7 @@ const AllTitle = styled.h1`
 `
 const Card = styled.div`
   width:18vw;
-  margin-bottom:5vh;
+  margin:4vh 2vw;
   cursor:pointer;
 `
 const Poster = styled.img`
@@ -123,32 +123,44 @@ const HeartIcon = styled.img`
 `
 export default class Favoritos extends React.Component {
   state = {
-    filmes: Data,
-    listafilter: [],
+    allMovies: [],
+    filteredMovies: [],
     boxState: false
   }
 
-  componentWillMount() {
+  async componentDidMount() {  
+    this.getAllMovies()
+  }
+  getAllMovies = async () => {
+    const response = await api.get('/allMovies')
+    console.log(response.data)
+    
+    const allMoviesList = response.data.map((item) => {
+      return {...item,}}
+    )
+  
     this.setState({
-      listafilter: this.state.filmes
+      allMovies:allMoviesList,
+      filteredMovies: allMoviesList
     })
   }
 
+
   filtro = (e) => {
-    const { filmes } = this.state;
+    const { allMovies } = this.state;
     if (e.target.value === '') {
       this.setState({
-        listafilter: filmes
+        filteredMovies: allMovies
       })
       return
     }
-    const filmeconvert = filmes.filter((item) => {
+    const search = allMovies.filter((item) => {
       if (item.title.toLowerCase().includes(e.target.value.toLowerCase())) {
         return true
       }
     })
     this.setState({
-      listafilter: filmeconvert
+      filteredMovies: search
     })
   }
 
@@ -164,7 +176,7 @@ export default class Favoritos extends React.Component {
         <GlobalStyle />
         <AllTitle>Favoritados</AllTitle>
         <Container>
-          {this.state.listafilter.map(item => (
+          {this.state.filteredMovies.map(item => (
             <Card style={item.isFavorito === false ? { display: "none" } : item.isFavorito}>
               {item.isFavorito && (
                 <>

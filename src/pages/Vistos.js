@@ -1,5 +1,5 @@
 import React from "react";
-import Data from "../services/all.json"
+import {api} from "../services/api"
 import { createGlobalStyle } from "styled-components";
 import Modal from "react-modal";
 import styled from "styled-components";
@@ -57,7 +57,7 @@ const AllTitle = styled.h1`
 `
 const Card = styled.div`
   width:18vw;
-  margin-bottom:5vh;
+  margin:4vh 2vw;
   cursor:pointer;
 `
 const Poster = styled.img`
@@ -121,35 +121,48 @@ const HeartIcon = styled.img`
   cursor:pointer;
 `
 export default class Vistos extends React.Component {
-  state={
-    filmes: Data,
-    listafilter: [],
+  state = {
+    allMovies: [],
+    filteredMovies: [],
     boxState: false
   }
 
-  componentWillMount() {
+  async componentDidMount() {  
+    this.getAllMovies()
+  }
+  getAllMovies = async () => {
+    const response = await api.get('/allMovies')
+    console.log(response.data)
+    
+    const allMoviesList = response.data.map((item) => {
+      return {...item,}}
+    )
+  
     this.setState({
-      listafilter: this.state.filmes
+      allMovies:allMoviesList,
+      filteredMovies: allMoviesList
     })
   }
 
+
   filtro = (e) => {
-    const {filmes} = this.state;
-    if(e.target.value === '') {
+    const { allMovies } = this.state;
+    if (e.target.value === '') {
       this.setState({
-        listafilter:filmes
+        filteredMovies: allMovies
       })
       return
     }
-    const filmeconvert = filmes.filter((item) => {
-      if(item.title.toLowerCase().includes(e.target.value.toLowerCase())){
+    const search = allMovies.filter((item) => {
+      if (item.title.toLowerCase().includes(e.target.value.toLowerCase())) {
         return true
       }
     })
     this.setState({
-      listafilter:filmeconvert
+      filteredMovies: search
     })
   }
+
   handleModal = () => {
     this.setState({
       boxState: !this.state.boxState
@@ -167,7 +180,7 @@ export default class Vistos extends React.Component {
         <GlobalStyle />
         <AllTitle>Já Vistos</AllTitle>
         <Container>
-          {this.state.listafilter.map(item => (
+          {this.state.filteredMovies.map(item => (
             <Card style={item.isAssistido === false ? {display:"none"}: item.isAssistido}>
               {item.isAssistido && (
                 <>
