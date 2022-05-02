@@ -30,7 +30,8 @@
       "isVistoRecentemente": false,
       "isFavorito": false,
       "isAssistido": false,
-      "stars": null
+      "stars": null,
+      "isAdicionado": false
     },
     {
       "id": 4,
@@ -40,7 +41,8 @@
       "isVistoRecentemente": false,
       "isFavorito": false,
       "isAssistido": false,
-      "stars": null
+      "stars": null,
+      "isAdicionado": false
     },
     {
       "id": 5,
@@ -96,26 +98,6 @@
       "isAssistido": true,
       "isAdicionado": false,
       "stars": 5
-    },
-    {
-      "title": "aad",
-      "poster": "https://nice.com.br/novo2017/wp-content/uploads/2022/02/Imagem3-300x255.png",
-      "descricao": "daa",
-      "isAdicionado": true,
-      "isFavorito": false,
-      "isAssistido": false,
-      "stars": 5,
-      "id": 10
-    },
-    {
-      "title": "aad",
-      "poster": "https://cordisburgo.mg.gov.br/wp-content/uploads/2017/09/Imagem3.png",
-      "descricao": "bgfadgsfdnfhm,n.m",
-      "isAdicionado": true,
-      "isFavorito": false,
-      "isAssistido": false,
-      "stars": 1,
-      "id": 11
     }
   ],
   "destaques": [

@@ -67,7 +67,7 @@ export default class Menu extends React.Component {
       <>
       <Link onClick={this.category} to="/">Início</Link>
         <DropDownContainer>
-            <DropDownHeader onClick={this.toggling}>
+            <DropDownHeader onMouseOver={this.toggling}>
               {this.state.selectedOption || this.state.headMenu} &#9663;
             </DropDownHeader>
             {this.state.isOpen && (

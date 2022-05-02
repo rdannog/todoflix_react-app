@@ -34,8 +34,9 @@ export default class Header extends React.Component {
       stars: this.state.stars
     })
     this.setState({
-      boxState:!this.state.boxState,
-    })
+      boxState: !this.state.boxState,
+    }, window.location.reload()
+    )
   }
   getTitle = (e) => {
     this.setState({
@@ -57,7 +58,16 @@ export default class Header extends React.Component {
       stars: starRate
     })
   };
-
+  trueRadio = (value) => {
+    this.setState({
+      isAssistido: value.target.checked
+    })
+  }
+  falseRadio = (value) => {
+    this.setState({
+      isAssistido: value.target.checked
+    })
+  }
   handleModal = () => {
     this.setState({
       boxState: !this.state.boxState
@@ -96,7 +106,7 @@ export default class Header extends React.Component {
                   <label>
                     Nome
                   </label>
-                  <input type="text" name="nome" style={{ height: "4vh" }} onChange={this.getTitle} required/>
+                  <input type="text" name="nome" style={{ height: "4vh" }} onChange={this.getTitle} required />
 
                   <label>
                     Descrição
@@ -109,7 +119,7 @@ export default class Header extends React.Component {
                   <label>
                     Imagem de capa
                   </label>
-                  <input type="text" placeholder="Cole aqui a url da imagem" onChange={this.getPoster} required/>
+                  <input type="text" placeholder="Cole aqui a url da imagem" onChange={this.getPoster} required />
 
                 </div>
               </div>
@@ -117,10 +127,10 @@ export default class Header extends React.Component {
               <div className="status">
                 <h3>Status</h3>
                 <label>
-                  <input type="radio" name="status" value="true" required/>
+                  <input onChange={this.trueRadio} type="radio" name="status" value="true" required />
                   Já assisti </label>
                 <label>
-                  <input type="radio" name="status" value="false" required/>
+                  <input onChange={this.falseRadio} type="radio" name="status" value="false" required />
                   Ainda não assisti </label>
               </div>
               <div>
