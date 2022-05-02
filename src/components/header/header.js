@@ -1,6 +1,7 @@
 //Libs
 import React from "react";
 import Modal from "react-modal";
+import { api } from "../../services/api"
 import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 //Components
@@ -13,8 +14,49 @@ import Placeholder from "./img/placeholder.png"
 
 export default class Header extends React.Component {
   state = {
-    boxState: false
+    boxState: false,
+    title: [],
+    descricao: [],
+    poster: [Placeholder],
+    isAdicionado: [],
+    isAssistido: false,
+    stars: 0
+
   }
+  addFilm = () => {
+    api.post('/allMovies', {
+      title: this.state.title,
+      poster: this.state.poster,
+      descricao: this.state.descricao,
+      isAdicionado: true,
+      isFavorito: false,
+      isAssistido: this.state.isAssistido,
+      stars: this.state.stars
+    })
+    this.setState({
+      boxState:!this.state.boxState,
+    })
+  }
+  getTitle = (e) => {
+    this.setState({
+      title: e.target.value
+    })
+  }
+  getDescricao = (e) => {
+    this.setState({
+      descricao: e.target.value
+    })
+  }
+  getPoster = (e) => {
+    this.setState({
+      poster: e.target.value
+    })
+  }
+  getRating = (starRate) => {
+    this.setState({
+      stars: starRate
+    })
+  };
 
   handleModal = () => {
     this.setState({
@@ -54,20 +96,20 @@ export default class Header extends React.Component {
                   <label>
                     Nome
                   </label>
-                  <input type="text" name="nome" id="nome" style={{ height: "4vh" }} />
+                  <input type="text" name="nome" style={{ height: "4vh" }} onChange={this.getTitle} required/>
 
                   <label>
                     Descrição
                   </label>
-                  <textarea name="comentarios" id="comentarios" style={{ height: "8vh" }}></textarea>
+                  <textarea name="descricao" style={{ height: "8vh" }} onChange={this.getDescricao} required></textarea>
 
                 </div>
                 <div className="image-box">
-                  <img src={Placeholder} alt="" style={{ filter: "brightness(0.6)" }} />
+                  <img src={this.state.poster} alt="" />
                   <label>
                     Imagem de capa
                   </label>
-                  <input type="text" placeholder="Cole aqui a url da imagem"/>
+                  <input type="text" placeholder="Cole aqui a url da imagem" onChange={this.getPoster} required/>
 
                 </div>
               </div>
@@ -75,21 +117,21 @@ export default class Header extends React.Component {
               <div className="status">
                 <h3>Status</h3>
                 <label>
-                <input type="radio" name="status" value="Já assisti" />
-                 Já assisti </label>
+                  <input type="radio" name="status" value="true" required/>
+                  Já assisti </label>
                 <label>
-                <input type="radio" name="status" value="Ainda não assisti" />
-                 Ainda não assisti </label>
+                  <input type="radio" name="status" value="false" required/>
+                  Ainda não assisti </label>
               </div>
               <div>
                 <h3>
                   Nota
-                  <ReactStars {...info} />
+                  <ReactStars {...info} onChange={this.getRating} />
                 </h3>
               </div>
               <div className="button">
                 <S.AddButton onClick={this.handleModal} style={{ backgroundColor: "transparent" }}>Cancelar</S.AddButton>
-                <S.AddButton>Confirmar</S.AddButton>
+                <S.AddButton onClick={this.addFilm}>Confirmar</S.AddButton>
               </div>
             </div>
           </Modal>
