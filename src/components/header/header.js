@@ -85,7 +85,7 @@ export default class Header extends React.Component {
       <S.Container>
         <S.MenuWrapper>
           <Link to="/"><S.Title>todoflix</S.Title></Link>
-          <Menu />
+          <Menu/>
         </S.MenuWrapper>
         <S.SearchWrapper>
           <S.AddButton onClick={this.handleModal}>Adicionar Filme</S.AddButton>

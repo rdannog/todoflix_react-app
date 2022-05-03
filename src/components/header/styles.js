@@ -43,7 +43,7 @@ export const AddButton = styled.button`
   border:none;
 `
 export const Input = styled.input`
-  visibility: hidden;
+  visibility:hidden;
   padding:1.5vh 3.2vw;
   border:transparent;
   border-radius:5px;

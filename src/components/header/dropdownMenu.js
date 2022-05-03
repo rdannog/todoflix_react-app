@@ -9,6 +9,8 @@ const DropDownContainer = styled.div`
 `;
 
 const DropDownHeader = styled.div`
+  display:flex;
+  align-items:center;
   padding:0.5vh 1vw;
   word-spacing:0.8vw;
   cursor:pointer;
@@ -67,8 +69,9 @@ export default class Menu extends React.Component {
       <>
       <Link onClick={this.category} to="/">Início</Link>
         <DropDownContainer>
-            <DropDownHeader onMouseOver={this.toggling}>
-              {this.state.selectedOption || this.state.headMenu} &#9663;
+            <DropDownHeader onClick={this.toggling}>
+              <span>{this.state.selectedOption || this.state.headMenu}</span>
+              <span style={{marginLeft:"0.5vw"}}> {this.state.isOpen === false ? 	<p>&#9667;</p> : <p>&#9663;</p>}</span>
             </DropDownHeader>
             {this.state.isOpen && (
               <DropDownListContainer>
@@ -81,6 +84,9 @@ export default class Menu extends React.Component {
                     </ListItem>
                     <ListItem onClick={this.onOptionClicked("Já Vistos")} >
                       <Link to="/vistos">Já Vistos</Link>
+                    </ListItem>
+                    <ListItem onClick={this.onOptionClicked("Adicionados")} >
+                      <Link to="/adicionados">Adicionados</Link>
                     </ListItem>
                 </DropDownList>
               </DropDownListContainer>

@@ -6,6 +6,7 @@ import "./App.css"
 import Todos from "./pages/Todos";
 import Vistos from "./pages/Vistos";
 import Favoritos from "./pages/Favoritos";
+import Adicionados from "./pages/Adicionados";
 
 export default class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ export default class App extends React.Component {
           <Route path="/todos" element={<Todos />} />
           <Route path="/favoritos" element={<Favoritos />} />
           <Route path="/vistos" element={<Vistos />} />
+          <Route path="/adicionados" element={<Adicionados />} />
         </Routes>
       </Router>
     )
