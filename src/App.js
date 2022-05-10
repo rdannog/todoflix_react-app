@@ -9,6 +9,7 @@ import Favoritos from "./pages/Favoritos";
 import Adicionados from "./pages/Adicionados";
 
 export default class App extends React.Component {
+  
   render() {
     return (
       <Router>

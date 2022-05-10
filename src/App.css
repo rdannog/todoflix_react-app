@@ -52,7 +52,7 @@ textarea {
 .image-box img {
   border: solid 1px #2C2C2C;
   border-radius: 8px;
-  height: 80%;
+  height: 70%;
   position: absolute;
   bottom: 8vh;
 }
@@ -68,18 +68,27 @@ textarea {
 }
 .status{
   margin-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
 }
 .status input{
   margin-top: 1.5vh;
   margin-right: 0.5vw;
 }
 .status label{
-  margin-right: 1vw;
+  margin-right: 3vw;
+}
+.status div{
+  display: flex;
+  align-items: center;
+  height: 5vh;
 }
 .button{
-  margin-top: 4vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 6vh;
+  margin-top: 1vh;
 }
 .button button{
   margin-right: 1vw;
@@ -106,4 +115,23 @@ textarea {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin-right: 0.7vw;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.15em solid #000;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid rgb(193, 44, 44);
+  outline-offset: max(2px, 0.15em);
 }

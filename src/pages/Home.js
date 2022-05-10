@@ -116,6 +116,7 @@ export default class Home extends React.Component {
     allMovies: [],
     filteredMovies: []
   }
+  
   async componentDidMount() {  
     this.getAllMovies()
   }
@@ -134,12 +135,20 @@ export default class Home extends React.Component {
 
   handleSearch = (e) => {
     const { allMovies } = this.state;
-    if (e.target.value === "") {
-      this.setState({
-        filteredMovies: <>
+    
+    const clear = () => {
+      return(
+        <>
           <Intro />
           <Slide />
         </>
+      )
+    }
+
+    
+    if (e.target.value.lenght > 1) {
+      this.setState({
+        filteredMovies: clear()
       })
     }
 

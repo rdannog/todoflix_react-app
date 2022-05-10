@@ -85,12 +85,11 @@ export default class Header extends React.Component {
       <S.Container>
         <S.MenuWrapper>
           <Link to="/"><S.Title>todoflix</S.Title></Link>
-          <Menu/>
+          <Menu />
         </S.MenuWrapper>
         <S.SearchWrapper>
           <S.AddButton onClick={this.handleModal}>Adicionar Filme</S.AddButton>
           <Modal
-            role={"dialog"}
             shouldFocusAfterRender={true}
             className="Modal"
             onRequestClose={this.handleModal}
@@ -106,12 +105,12 @@ export default class Header extends React.Component {
                   <label>
                     Nome
                   </label>
-                  <input type="text" name="nome" style={{ height: "4vh" }} onChange={this.getTitle} required />
+                  <input type="text" name="title" style={{ height: "4vh", padding: "10px" }} onChange={this.getTitle} required />
 
                   <label>
                     Descrição
                   </label>
-                  <textarea name="descricao" style={{ height: "8vh" }} onChange={this.getDescricao} required></textarea>
+                  <textarea name="description" style={{ height: "8vh", padding: "10px" }} onChange={this.getDescricao} required></textarea>
 
                 </div>
                 <div className="image-box">
@@ -126,12 +125,14 @@ export default class Header extends React.Component {
 
               <div className="status">
                 <h3>Status</h3>
-                <label>
-                  <input onChange={this.trueRadio} type="radio" name="status" value="true" required />
-                  Já assisti </label>
-                <label>
-                  <input onChange={this.falseRadio} type="radio" name="status" value="false" required />
-                  Ainda não assisti </label>
+                <div>
+                  <label>
+                    <input onChange={this.trueRadio} type="radio" name="status" value="true" required />
+                    Já assisti </label>
+                  <label>
+                    <input onChange={this.falseRadio} type="radio" name="status" value="false" required />
+                    Ainda não assisti </label>
+                </div>
               </div>
               <div>
                 <h3>
